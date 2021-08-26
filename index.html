@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NEARCUT</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<!-- Favicon -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+ <!-- Styles -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/countrySelect.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/intlTelInput.css">
+ <!-- Styles -->
+ 
+		
+</head>
+<body>
+<div class="wrapper">
+<section class="content">
+	<div class="banner">
+		<div class="banner-text">
+			<h1>The Completely Powerful Booking System for Barbers</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum.</p>
+			<button type="button" class="btn">Get Started</button>
+		</div>
+		<div class="banner-image">
+		<img src="img/iphone-img.png" width="100%" alt="" />
+		</div>
+	</div>
+	<div class="form-area">
+	<section class="create-account">
+	<form action="#">
+		<label for="fullName">Full Name </label>
+		<input id="fullName" name="fullname" placeholder="Please enter your full name" required="" type="text" />
+		<label for="email">Email</label>
+		<input id="email" name="email" placeholder="Please enter your email" required="" type="email" />
+		<label for="phone">Phone Number</label>
+		<input id="phone" name="phone" type="tel" />
+		<label for="businessName">Business Name</label>
+		<input id="businessName" name="businessname" placeholder="Please enter your Business name here" type="text" />
+		<label for="country">Country </label>
+
+	    <input id="country_selector" name="country" type="text" />
+		<input type="checkbox" id="cb" name="cb">
+        <label for="cb">I agree to all terms & conditions and policy features.</label>
+		
+		<div class="align-center"><button id="createYourAccount" class="btn">Create Your Account</button></div>
+		
+		<div class="existing-user">Already have a Nearcut account? <a href="#" target="_blank"> Login Here</a></div>
+	</form>
+
+	</section>
+	<article class="create-account-text">
+	     <h2>Complete the registration <br/>form to get started</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum.  </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+
+	</article>
+	</div>
+</section>
+</div>
+<footer class="main-footer">
+	<div class="container">
+	<section class="contact-info">
+				<img src="img/footer-logo.png" width="127" alt="Nearcut logo" />
+				<div>So much more than a booking system</div>
+				<div><a href="tel:+441606277565"><i class="fa fa-phone" aria-hidden="true"></i>01 606 277 565</a></div>
+				<div><a href="mailto:andy@nearcut.com" ><i class="fa fa-envelope" aria-hidden="true"></i>Email Us</a></div>
+
+	</section>
+	
+	<div class="social-links">
+		<h3>Social Media</h3>
+		<a href="https://www.facebook.com/NearcutUK" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="https://twitter.com/nearcut" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a href="https://www.instagram.com/nearcutuk/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/company/nearcut" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+	</div>
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/countrySelect.js"></script>
+<script src="js/intlTelInput.js"></script>
+<script>
+// popuplate countries in dropdown
+$("#country_selector").countrySelect({
+preferredCountries: ['de', 'gb', 'us']
+});
+
+// International Telephone Input
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+  // allowDropdown: false,
+  // autoHideDialCode: false,
+  // autoPlaceholder: "off",
+  // dropdownContainer: document.body,
+  // excludeCountries: ["us"],
+  // formatOnDisplay: false,
+  // geoIpLookup: function(callback) {
+  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+  //     var countryCode = (resp && resp.country) ? resp.country : "";
+  //     callback(countryCode);
+  //   });
+  // },
+  // hiddenInput: "full_number",
+  // initialCountry: "auto",
+  // localizedCountries: { 'de': 'Deutschland' },
+  // nationalMode: false,
+  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+  // placeholderNumberType: "MOBILE",
+   preferredCountries: ['de','gb', 'us'],
+  // separateDialCode: true,
+  utilsScript: "js/utils.js",
+});
+</script>
+</body>
+</html>
