@@ -6,6 +6,7 @@ body{
 	background:url(../img/bg.jpg) no-repeat top center;
 	font-family: 'Nunito Sans', sans-serif;
     background-size: 100%;
+	color:#242424;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -304,7 +305,23 @@ input[type="checkbox"]:checked + label::after {
 /* footer */
 
 /* Media queries */
-@media only screen and (max-width: 835px) {
+@media only screen and (max-width:1024px) {
+	/* Banner */
+  .banner-image {
+    max-width: 90%;
+  }
+  /* Banner */
+  .form-area article {
+    padding: 57px 16px 10px 60px;
+  }
+  .create-account {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width:834px) {
+    body{
+    background-size: cover;
+	}
 /* Banner */
   .banner-text {
     padding: 7px 48px 0px 13px;
@@ -323,7 +340,7 @@ input[type="checkbox"]:checked + label::after {
 	  margin-top:3px;
   }
   .banner-image {
-    max-width: 321px;
+    max-width: 90%;
     position: relative;
     left: 30px;
     top: -47px;
@@ -333,7 +350,7 @@ input[type="checkbox"]:checked + label::after {
   /*form*/
 
   .create-account {
-	min-width: 376px;
+	max-width: 376px;
 	margin-left: 0px;
 	padding: 34px 24px;
   }
@@ -354,6 +371,12 @@ input[type="checkbox"]:checked + label::after {
 	width:100%;
     margin-bottom: 34px;
    }
+   #createYourAccount{
+    padding: 10px 50px;
+   }
+   .existing-user{
+	font-size: 0.9rem;   
+   }
   /*form*/
   /* footer */
   .main-footer {
@@ -364,7 +387,7 @@ input[type="checkbox"]:checked + label::after {
  /* footer */
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 569px) {
 	body{
     background-size: cover;
 	}
@@ -393,13 +416,19 @@ input[type="checkbox"]:checked + label::after {
     padding: 0px 7px;
    }
    .create-account {
-    min-width: 312px;
+    min-width:250px;
+	max-width: 80%;
     margin-left: 0px;
     padding: 33px 20px;
 	margin: 0 auto;
 }
    .create-account-text{
-	   display:none;
+	display:none;
+   }
+  
+   #createYourAccount{
+    padding: 10px 20px;
+	width:100%;
    }
      /*form*/
   /* footer */
@@ -411,7 +440,7 @@ input[type="checkbox"]:checked + label::after {
     padding-top: 13px;
     display: inline-block;
     font-size: 21px;
-    padding-right: 71px;
+    padding-right: 12%;
    }
    /* footer */
 }
