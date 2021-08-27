@@ -250,8 +250,9 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .selected-flag .arrow {
-    left: 35px;
+	right: 22px !important;
     top: 16px !important;
+    left: inherit;
 }
 .iti__arrow:before,
 .country-select .arrow:before {
@@ -267,8 +268,15 @@ input[type="checkbox"]:checked + label::after {
     border-right: 1px solid #c7c7c7;
     z-index: 1;
 }
+.country-select.inside .flag-dropdown{
+	width: 100% !important;
+}
 .country-select .selected-flag {
     z-index: 0;
+	width: 100% !important;
+}
+.country-select.inside input, .country-select.inside input[type=text]{
+	padding-left:40px;
 }
 /*form*/
 
