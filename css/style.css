@@ -315,6 +315,9 @@ input[type="checkbox"]:checked + label::after {
     padding-right: 61px;
     padding-left: 7px;
 }
+.social-links a:hover{
+	text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 10px #fff;
+}
 .social-links a:last-child {
     padding-right: 0px;
 }
