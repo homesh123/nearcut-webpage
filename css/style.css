@@ -405,6 +405,7 @@ input[type="checkbox"]:checked + label::after {
 
 @media only screen and (max-width: 569px) {
     body {
+		background: url(../img/m-bg.jpg) repeat-y top center;
         background-size: cover;
     }
     /* Banner */
