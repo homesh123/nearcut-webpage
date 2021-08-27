@@ -17,7 +17,7 @@
         <!-- fonts -->
 
         <!-- Styles -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/countrySelect.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/intlTelInput.css" />
@@ -97,12 +97,12 @@
         <script src="js/countrySelect.js"></script>
         <script src="js/intlTelInput.js"></script>
         <script>
-            // script to popuplate countries in dropdown
+            // Script to populate country dropdown
             $("#country_selector").countrySelect({
                 preferredCountries: ["de", "gb", "us"],
             });
 
-            // script for International Telephone Input
+            // Script for International Telephone Input
             var input = document.querySelector("#phone");
             window.intlTelInput(input, {
                 // allowDropdown: false,
